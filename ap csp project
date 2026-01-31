@@ -1,0 +1,59 @@
+def typeOfPet():
+    adopt = []
+    pet = input("What type of pet do you want (dog,cat, or rabbit)?: ")
+    adopt.append(pet)
+    trait = input("What trait do you want your pet to have? (playful, smart, or affectionate): ")
+    adopt.append(trait)
+    price = input("What is your budget for the price of your pet? (min $20 (put dollar sign before number)): ")
+    adopt.append(price)
+    return adopt
+
+def findingPet(nameOfPotentialPet):
+    while True:
+        adopt = typeOfPet()
+        if adopt[0] == "rabbit" or "cat" or "dog":
+            if adopt [0] == "rabbit" and adopt[1] == "playful" and adopt[2] >= "$20":
+                print("Congratulations! You found a mini rex! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            elif adopt [0] == "rabbit" and adopt[1] == "affectionate" and adopt[2] >= "$20":
+                print("Congratulations! You found a mini loop! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            elif adopt [0] == "rabbit" and adopt[1] == "smart" and adopt[2] >= "$30":
+                print("Congratulations! You found a netherland dwarf! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+           
+            elif adopt [0] == "dog" and adopt[1] == "playful" and adopt[2] >= "$50":
+                print("Congratulations! You found a corgi! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            elif adopt [0] == "dog" and adopt[1] == "affectionate" and adopt[2] >= "$50":
+                print("Congratulations! You found a golden retreiver! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            elif adopt [0] == "dog" and adopt[1] == "smart" and adopt[2] >= "$40":
+                print("Congratulations! You found a beagle! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            
+            elif adopt [0] == "cat" and adopt[1] == "playful" and adopt[2] >= "$50":
+                print("Congratulations! You found a ragdoll! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            elif adopt [0] == "cat" and adopt[1] == "affectionate" and adopt[2] >= "$40":
+                print("Congratulations! You found a tabby! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            elif adopt [0] == "cat" and adopt[1] == "smart" and adopt[2] >= "$40":
+                print("Congratulations! You found a siamese! " + nameOfPotentialPet + ", welcome to your new family!")
+                break
+            
+            else:
+                choice = input("Sorry, we can not find a match for you, do you want to try again? (yes/no): ")
+                if choice == "yes":
+                    continue
+                else:
+                    print("It was nice seeing you! We hope you come again")
+                    break
+
+choice1 = input("Welcome to Paws Palace, we are so happy you are here! Are you interested in adopting today? (yes/no): ")
+if choice1 == "no":
+    print("Thank you for visiting! We hope to see you again")
+else:
+    findingPet("Doug")
+
+# sources used: assignment 10.1.4 Guess the Word Part 3
